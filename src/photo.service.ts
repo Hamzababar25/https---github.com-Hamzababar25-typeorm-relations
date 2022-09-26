@@ -21,7 +21,7 @@ export class PhotoService {
     return await this.photoRepository.find();
   }
   async findOne(id: number): Promise<Photo> {
-    return this.photoRepository.findOneBy({id});
+    return this.photoRepository.findOne({where:{id},relations:['test']})
   }
   async delete(id: number) {
     const deleteddoc = await this.photoRepository.delete({id});

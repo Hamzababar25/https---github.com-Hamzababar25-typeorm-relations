@@ -2,6 +2,7 @@ import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common'
 import { AppService } from './app.service';
 import { Photo } from './photo.entity';
 import { PhotoService } from './photo.service';
+import { Test } from './test/test.entity';
 
 
 
@@ -12,6 +13,7 @@ export class CreatedPhotoDto {
   filename: string;
   views: number;
   isPublished: boolean;
+  test:Test
   
  
 

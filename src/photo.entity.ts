@@ -21,10 +21,10 @@ export class Photo {
   @Column()
   isPublished: boolean;
 
-  @Column({nullable:true})
+/*   @Column({nullable:true})
   testId: number;
-
+ */
   @OneToOne(()=>Test,test =>test.photo,{onDelete:"CASCADE"})
-  @JoinColumn()
+  @JoinColumn({name:'photo'})
   test:Test; 
 }

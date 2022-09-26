@@ -1,5 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
+import { Photo } from 'src/photo.entity';
 
 
 
@@ -10,6 +11,7 @@ import { TestService } from './test.service';
 export class CreatedTest {
   name: string;
  breeed:string;
+ photo:Photo;
  
 
 }
